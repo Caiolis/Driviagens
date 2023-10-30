@@ -1,5 +1,5 @@
-import dayjs from "dayjs"
-import { db } from "../configs/databaseConnection.js"
+import dayjs from "dayjs";
+import { db } from "../database/database.connection.js";
 
 async function insertFlightIntoDb(origin, destination, date) {
     await db.query(

@@ -1,4 +1,4 @@
-import { db } from "../configs/databaseConnection.js"
+import { db } from "../database/database.connection.js";
 
 async function insertPassengerDb(firstName, lastName) {
     await db.query(
