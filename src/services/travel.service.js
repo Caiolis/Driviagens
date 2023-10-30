@@ -1,10 +1,10 @@
 import { errors } from "../errors/errors.js";
 import { flightRepository } from "../repository/flight.repository.js";
-import { passengerRepository } from "../repository/passenger.repository.js";
+import { passengerRepositoryFunctions } from "../repository/passenger.repository.js";
 import { travelRepository } from "../repository/travel.repository.js";
 
 async function bookTravel(passengerId, flightId) {
-    const passenger = await passengerRepository.findById(passengerId)
+    const passenger = await passengerRepositoryFunctions.findById(passengerId)
     if (!passenger) throw errors.notFound("Passenger")
 
     const flight = await flightRepository.findById(flightId)

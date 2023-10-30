@@ -8,4 +8,4 @@ async function createCity(cityName) {
     await cityRepository.insertCity(cityName)
 }
 
-export const cityService = { createCity, findById, findByName }
+export const cityService = { createCity }
