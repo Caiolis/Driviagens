@@ -8,4 +8,16 @@ async function createPassenger(req, res) {
     res.sendStatus(httpStatus.CREATED)
 }
 
-export const passengerController = { createPassenger };
+async function searchTravels(req, res) {
+    const { name } = req.query
+
+    const travels = await passengerService.searchTravels(name)
+    
+    const formattedTravels = travels.map(travel => {
+        return {...travel, travels: parseInt(travel.travels)}
+    })
+
+    res.send(formattedTravels)
+}
+
+export const passengerController = { createPassenger, searchTravels };
