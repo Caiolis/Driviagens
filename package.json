@@ -1,0 +1,36 @@
+{
+  "name": "driviagens",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A travelling agencie API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caiolis/Driviagens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caiolis/Driviagens/issues"
+  },
+  "homepage": "https://github.com/Caiolis/Driviagens#readme",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "http-status": "^1.7.3",
+    "joi": "^17.11.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
