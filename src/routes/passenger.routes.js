@@ -1,6 +1,6 @@
 import { Router } from "express"
 import { validateSchema } from "../middlewares/validateSchema.middleware.js"
-import { passengerSchema } from "../schemas/passengerSchema.js"
+import { passengerSchema } from "../schemas/passenger.schema.js"
 import { passengerController } from "../controllers/passenger.controller.js"
 
 const passengerRouter = Router()
