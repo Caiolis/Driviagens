@@ -26,4 +26,9 @@ async function searchTravelsIntoDb(name) {
     return result.rows
 }
 
-export const passengerRepositoryFunctions = { insertPassengerDb }
+async function findById(id) {
+    const passenger = await db.query(`SELECT * FROM passengers WHERE id=$1;`, [id])
+    return passenger.rows[0]
+}
+
+export const passengerRepositoryFunctions = { insertPassengerDb, searchTravelsIntoDb, findById }
